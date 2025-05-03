@@ -10,6 +10,7 @@
 #
 - type: vessel
   id: Bocadillo
+  parent: BaseVessel
   name: NC Bocadillo
   description: A tiny food truck perfect for a solo chef.
   price: 25000 # TODO: fix this value, getting tests to pass - Whatstone
@@ -38,6 +39,6 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

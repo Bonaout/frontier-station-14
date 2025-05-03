@@ -680,7 +680,7 @@
     state: fortune
   - type: Item
   - type: RandomMetadata
-    descriptionSegments: [CookieFortuneDescriptions]
+    descriptionSegments: [DescriptionsCookieFortune]
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -694,7 +694,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 30
+        maxVol: 45
         reagents:
         - ReagentId: Fiber
           Quantity: 40

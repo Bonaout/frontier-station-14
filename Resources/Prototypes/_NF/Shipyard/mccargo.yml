@@ -7,6 +7,7 @@
 
 - type: vessel
   id: McCargo
+  parent: BaseVessel
   name: DC McCargo
   description: "Your very own McCargo™ franchise! Comes fully stocked and ready for production of McMeals."
   price: 80000 # TODO: fix these values, getting tests to pass - Whatstone
@@ -35,6 +36,6 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

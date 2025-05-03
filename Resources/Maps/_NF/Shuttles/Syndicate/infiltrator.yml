@@ -537,9 +537,6 @@ entities:
             id: syndlogo8
           decals:
             19: 0,-6
-    - type: IFF
-      color: '#FFC000FF'
-      flags: HideLabel
     - type: OccluderTree
     - type: Shuttle
     - type: RadiationGridResistance
@@ -2128,7 +2125,7 @@ entities:
       canCollide: False
     - type: Fixtures
       fixtures: {}
-- proto: CargoPallet
+- proto: Catwalk
   entities:
   - uid: 306
     components:
