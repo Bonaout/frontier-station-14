@@ -1,13 +1,13 @@
 #region full stacks
 - type: entity
   id: NFInflatableWallStack
-  parent: BaseItem
+  parent: [ BaseItem, RecyclableItemPlasticSmall ]
   name: inflatable wall
   suffix: Full
   components:
     - type: Stack
       stackType: NFInflatableWall
-      count: 30
+      count: 10
     - type: Sprite
       sprite: _NF/Objects/Misc/inflatable_wall.rsi
       state: item_wall
@@ -23,13 +23,13 @@
 
 - type: entity
   id: NFInflatableDoorStack
-  parent: BaseItem
+  parent: [ BaseItem, RecyclableItemPlasticSmall ]
   name: inflatable door
   suffix: Full
   components:
     - type: Stack
       stackType: NFInflatableDoor
-      count: 30
+      count: 4
     - type: Sprite
       sprite: _NF/Objects/Misc/inflatable_door.rsi
       state: item_door
@@ -45,13 +45,13 @@
 
 - type: entity
   id: NFInflatableDockStack
-  parent: BaseItem
+  parent: [ BaseItem, RecyclableItemPlasticSmall ]
   name: inflatable external airlock
   suffix: Full
   components:
     - type: Stack
       stackType: NFInflatableDock
-      count: 30
+      count: 2
     - type: Sprite
       sprite: _NF/Objects/Misc/inflatable_dock.rsi
       state: item_door
@@ -67,13 +67,13 @@
 
 - type: entity
   id: NFInflatableWindowStack
-  parent: BaseItem
+  parent: [ BaseItem, RecyclableItemPlasticSmall ]
   name: inflatable window
   suffix: Full
   components:
     - type: Stack
       stackType: NFInflatableWindow
-      count: 30
+      count: 10
     - type: Sprite
       sprite: _NF/Objects/Misc/inflatable_window.rsi
       state: item_window
@@ -89,13 +89,13 @@
 
 - type: entity
   id: NFInflatableDoorWindowStack
-  parent: BaseItem
+  parent: [ BaseItem, RecyclableItemPlasticSmall ]
   name: inflatable windoor
   suffix: Full
   components:
     - type: Stack
       stackType: NFInflatableDoorWindow
-      count: 30
+      count: 10
     - type: Sprite
       sprite: _NF/Objects/Misc/inflatable_door_window.rsi
       state: item_door
@@ -111,13 +111,13 @@
 
 - type: entity
   id: NFInflatableCrateStack
-  parent: BaseItem
+  parent: [ BaseItem, RecyclableItemPlasticSmall ]
   name: inflatable crate
   suffix: Full
   components:
     - type: Stack
       stackType: NFInflatableCrate
-      count: 30
+      count: 4
     - type: Sprite
       sprite: _NF/Objects/Misc/inflatable_crate.rsi
       state: item-folded
@@ -133,7 +133,7 @@
 
 - type: entity
   name: inflatable floor
-  parent: BaseItem
+  parent: FloorTileItemBase
   id: NFInflatableFloorStack
   description: These couldn't work as a throwing weapon.
   suffix: Full
@@ -157,8 +157,6 @@
     damage:
       types:
         Blunt: 0
-  - type: PhysicalComposition
-  - type: ConstructionMaterials
 
 #region partial stacks
 - type: entity
