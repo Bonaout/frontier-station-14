@@ -20,6 +20,9 @@
       removeOnInteract: true
     - type: PhysicalComposition
     - type: ConstructionMaterials
+    - type: StackPrice
+      price: 25
+      vendPrice: 1000
 
 - type: entity
   id: NFInflatableDoorStack
@@ -29,7 +32,7 @@
   components:
     - type: Stack
       stackType: NFInflatableDoor
-      count: 4
+      count: 10
     - type: Sprite
       sprite: _NF/Objects/Misc/inflatable_door.rsi
       state: item_door
@@ -42,6 +45,9 @@
       removeOnInteract: true
     - type: PhysicalComposition
     - type: ConstructionMaterials
+    - type: StackPrice
+      price: 25
+      vendPrice: 1000
 
 - type: entity
   id: NFInflatableDockStack
@@ -51,7 +57,7 @@
   components:
     - type: Stack
       stackType: NFInflatableDock
-      count: 2
+      count: 10
     - type: Sprite
       sprite: _NF/Objects/Misc/inflatable_dock.rsi
       state: item_door
@@ -64,6 +70,9 @@
       removeOnInteract: true
     - type: PhysicalComposition
     - type: ConstructionMaterials
+    - type: StackPrice
+      price: 25
+      vendPrice: 100
 
 - type: entity
   id: NFInflatableWindowStack
@@ -86,6 +95,9 @@
       removeOnInteract: true
     - type: PhysicalComposition
     - type: ConstructionMaterials
+    - type: StackPrice
+      price: 25
+      vendPrice: 1000
 
 - type: entity
   id: NFInflatableDoorWindowStack
@@ -108,6 +120,9 @@
       removeOnInteract: true
     - type: PhysicalComposition
     - type: ConstructionMaterials
+    - type: StackPrice
+      price: 25
+      vendPrice: 1000
 
 - type: entity
   id: NFInflatableCrateStack
@@ -130,6 +145,9 @@
       removeOnInteract: true
     - type: PhysicalComposition
     - type: ConstructionMaterials
+    - type: StackPrice
+      price: 25
+      vendPrice: 100
 
 - type: entity
   name: inflatable floor
@@ -157,18 +175,11 @@
     damage:
       types:
         Blunt: 0
+  - type: StackPrice
+    price: 25
+    vendPrice: 3000
 
 #region partial stacks
-- type: entity
-  parent: NFInflatableWallStack
-  id: NFInflatableWallStack10
-  suffix: 10
-  components:
-    - type: Sprite
-      state: item_wall
-    - type: Stack
-      count: 10
-
 - type: entity
   parent: NFInflatableWallStack
   id: NFInflatableWallStack5
@@ -191,13 +202,13 @@
 
 - type: entity
   parent: NFInflatableDoorStack
-  id: NFInflatableDoorStack10
-  suffix: 10
+  id: NFInflatableDoorStack5
+  suffix: 5
   components:
     - type: Sprite
       state: item_door
     - type: Stack
-      count: 10
+      count: 5
 
 - type: entity
   parent: NFInflatableDoorStack
@@ -221,16 +232,6 @@
 
 - type: entity
   parent: NFInflatableDoorWindowStack
-  id: NFInflatableDoorWindowStack10
-  suffix: 10
-  components:
-    - type: Sprite
-      state: item_door
-    - type: Stack
-      count: 10
-
-- type: entity
-  parent: NFInflatableDoorWindowStack
   id: NFInflatableDoorWindowStack1
   suffix: 1
   components:
@@ -238,16 +239,6 @@
       state: item_door
     - type: Stack
       count: 1
-
-- type: entity
-  parent: NFInflatableWindowStack
-  id: NFInflatableWindowStack10
-  suffix: 10
-  components:
-    - type: Sprite
-      state: item_window
-    - type: Stack
-      count: 10
 
 - type: entity
   parent: NFInflatableWindowStack
