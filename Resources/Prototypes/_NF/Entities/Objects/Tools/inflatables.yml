@@ -70,9 +70,6 @@
       removeOnInteract: true
     - type: PhysicalComposition
     - type: ConstructionMaterials
-    - type: StackPrice
-      price: 25
-      vendPrice: 100
 
 - type: entity
   id: NFInflatableWindowStack
@@ -145,9 +142,6 @@
       removeOnInteract: true
     - type: PhysicalComposition
     - type: ConstructionMaterials
-    - type: StackPrice
-      price: 25
-      vendPrice: 100
 
 - type: entity
   name: inflatable floor
@@ -229,6 +223,9 @@
       state: item_door
     - type: Stack
       count: 1
+    - type: StackPrice
+      price: 25
+      vendPrice: 100
 
 - type: entity
   parent: NFInflatableDoorWindowStack
@@ -269,6 +266,9 @@
       state: item-folded
     - type: Stack
       count: 1
+    - type: StackPrice
+      price: 25
+      vendPrice: 100
 
 - type: entity
   parent: NFInflatableFloorStack
