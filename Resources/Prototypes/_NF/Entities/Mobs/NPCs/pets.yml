@@ -47,6 +47,12 @@
       - Cat
       - PetsNT
   - type: ShowJobIcons
+  - type: Stamp # imp - Pet Stamps
+    stampedName: stamp-component-stamped-name-clippy
+    stampedColor: "#1c1c1c"
+    stampState: "paper_stamp-cat"
+    stampLargeIcon: "clippy_stamp"
+    reapply: true
 
 - type: entity
   id: MobCatClarpy
@@ -106,6 +112,12 @@
       pitch: 0.7
   - type: AutoPirate
     applyFaction: false
+  - type: Stamp # imp - Pet Stamps
+    stampedName: stamp-component-stamped-name-clarpy
+    stampedColor: "#1c1c1c"
+    stampState: "paper_stamp-cat"
+    stampLargeIcon: "clarpy_stamp"
+    reapply: true
 
 - type: entity
   id: MobCatCappy
@@ -173,6 +185,12 @@
   - type: PirateBountyItem
     id: Cappy
   - type: SouthernAccent
+  - type: Stamp # imp - Pet Stamps
+    stampedName: stamp-component-stamped-name-cappy
+    stampedColor: "#1c1c1c"
+    stampState: "paper_stamp-cat"
+    stampLargeIcon: "cappy_stamp"
+    reapply: true
 
 - type: entity
   id: MobCatElCapo
@@ -277,6 +295,12 @@
     - Pop
   - type: TypingIndicator
     proto: slime
+  - type: Stamp # imp - Pet Stamps
+    stampedName: stamp-component-stamped-name-curie
+    stampedColor: "#1c1c1c"
+    stampState: "paper_stamp-cat"
+    stampLargeIcon: "curie_stamp"
+    reapply: true
 
 - type: entity
   id: MobCatCaddy
@@ -357,6 +381,12 @@
     addComponentsOnDeath: []
     removeComponentsOnDeath: []
   - type: CavemanAccent
+  - type: Stamp # imp - Pet Stamps
+    stampedName: stamp-component-stamped-name-clugg
+    stampedColor: "#1c1c1c"
+    stampState: "paper_stamp-cat"
+    stampLargeIcon: "clugg_stamp"
+    reapply: true
 
 - type: entity
   id: MobCatMistake
@@ -465,6 +495,12 @@
   - type: ActionGun
     action: ActionEldritchPush
     gunProto: EldritchPushGun
+  - type: Stamp # imp - Pet Stamps
+    stampedName: stamp-component-stamped-name-cat
+    stampedColor: "#1c1c1c"
+    stampState: "paper_stamp-cat"
+    stampLargeIcon: "cultcat_stamp"
+    reapply: true
 
 - type: entity
   id: EldritchPushGun

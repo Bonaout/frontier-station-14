@@ -3169,6 +3169,14 @@
     factions:
     - Cat
   # End DeltaV
+  # Frontier: Cat Stamps
+  - type: Stamp # imp - Pet Stamps
+    stampedName: stamp-component-stamped-name-cat
+    stampedColor: "#1c1c1c"
+    stampState: "paper_stamp-cat"
+    stampLargeIcon: "cat_stamp"
+    reapply: true
+  # End Frontier
 
 - type: entity
   name: calico cat
@@ -3241,6 +3249,14 @@
         Slash: 6
         Piercing: 6
         Structural: 15
+# Frontier: Cat Stamps
+  - type: Stamp # imp - Pet Stamps
+    stampedName: stamp-component-stamped-name-cat
+    stampedColor: "#1c1c1c"
+    stampState: "paper_stamp-cat"
+    stampLargeIcon: "syndicat_stamp"
+    reapply: true
+# End Frontier
 
 - type: entity
   name: space cat
@@ -3334,6 +3350,14 @@
     thresholds:
       0: Alive
       25: Dead
+  # Frontier: Cat Stamps
+  - type: Stamp # imp - Pet Stamps
+    stampedName: stamp-component-stamped-name-cat
+    stampedColor: "#1c1c1c"
+    stampState: "paper_stamp-cat"
+    stampLargeIcon: "kitten_stamp"
+    reapply: true
+  # End Frontier
 
 - type: entity
   name: sloth
@@ -3604,6 +3628,12 @@
       behaviors:
       - !type:GibBehavior
         recursive: false
+  - type: Stamp # imp - Pet Stamps
+    stampedName: stamp-component-stamped-name-hamster
+    stampedColor: "#1c1c1c"
+    stampState: "paper_stamp-hamster"
+    stampLargeIcon: "large_stamp-hamster"
+    reapply: true
 
 - type: entity
   name: pig

@@ -58,7 +58,7 @@ public sealed class PaperSystem : EntitySystem
         SubscribeLocalEvent<PaperComponent, ExaminedEvent>(OnExamined);
         SubscribeLocalEvent<PaperComponent, InteractUsingEvent>(OnInteractUsing);
         SubscribeLocalEvent<PaperComponent, PaperInputTextMessage>(OnInputTextMessage);
-        SubscribeLocalEvent<PaperComponent, GetVerbsEvent<AlternativeVerb>>(AddSignVerb); // Frontier - Sign verb hook
+        SubscribeLocalEvent<PaperComponent, GetVerbsEvent<AlternativeVerb>>(AddAlternativeVerbs); // Frontier - Sign verb hook and Pet Stamps
 
         SubscribeLocalEvent<RandomPaperContentComponent, MapInitEvent>(OnRandomPaperContentMapInit);
 
@@ -150,6 +150,73 @@ public sealed class PaperSystem : EntitySystem
             }
         }
     }
+
+    // Frontier - Pet Stamps
+    /// <summary>
+    ///     Adds the paper's alternative interaction verbs, such as signing and pet stamping.
+    /// </summary>
+    private void AddAlternativeVerbs(
+    EntityUid uid,
+    PaperComponent component,
+    GetVerbsEvent<AlternativeVerb> args)
+    {
+        AddSignVerb(uid, component, args);
+        AddStampVerb(uid, component, args);
+    }
+
+    /// <summary>
+    ///     Handles entities with a stamp component being able to stamp papers with their hands.
+    /// </summary>
+    private void AddStampVerb(EntityUid uid, PaperComponent component, GetVerbsEvent<AlternativeVerb> args)
+    {
+        if (!args.CanAccess || !args.CanInteract)
+            return;
+
+        // Sanity check
+        if (uid != args.Target || HasComp<GhostComponent>(args.User))
+            return;
+
+        // User must be a stamp.
+        if (!TryComp<StampComponent>(args.User, out var stampComp))
+            return;
+
+        AlternativeVerb verb = new()
+        {
+            Act = () =>
+            {
+                if (!TryStamp((uid, component), GetStampInfo(stampComp), stampComp.StampState))
+                    return;
+
+                var stampPaperOtherMessage = Loc.GetString(
+                    "paper-component-action-stamp-paper-other-isstamp",
+                    ("user", args.User),
+                    ("target", uid));
+
+                _popupSystem.PopupEntity(
+                    stampPaperOtherMessage,
+                    args.User,
+                    Filter.PvsExcept(args.User, entityManager: EntityManager),
+                    true);
+
+                var stampPaperSelfMessage = Loc.GetString(
+                    "paper-component-action-stamp-paper-self-isstamp",
+                    ("target", uid));
+
+                _popupSystem.PopupClient(
+                    stampPaperSelfMessage,
+                    args.User,
+                    args.User);
+
+                _audio.PlayPredicted(stampComp.Sound, uid, args.User);
+
+                UpdateUserInterface((uid, component));
+            },
+            Text = Loc.GetString("paper-component-verb-stamp")
+        };
+
+        args.Verbs.Add(verb);
+    }
+    // End Frontier - Pet Stamps
 
     private void OnInteractUsing(Entity<PaperComponent> entity, ref InteractUsingEvent args)
     {
@@ -248,7 +315,8 @@ public sealed class PaperSystem : EntitySystem
         {
             Reapply = stamp.Reapply, // Frontier
             StampedName = stamp.StampedName,
-            StampedColor = stamp.StampedColor
+            StampedColor = stamp.StampedColor,
+            StampLargeIcon = stamp.StampLargeIcon // imp - Stamp Icons
         };
     }
 
