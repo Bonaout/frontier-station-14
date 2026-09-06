@@ -372,7 +372,7 @@ uplink-pirate-rifleammo-desc = A box of .20 rifle rounds, used in the Romulan ri
 uplink-pirate-rifleammorubber-name = Romulan Rifle Rubber Ammo Box
 uplink-pirate-rifleammorubber-desc = A box of .20 rubber rounds, used in the Romulan rifle.
 
-uplink-pirate-riflerammobulk-name = Romulan Rifle Bulk Ammo Box
+uplink-pirate-rifleammobulk-name = Romulan Rifle Bulk Ammo Box
 uplink-pirate-rifleammobulk-desc = A big box of .20 rifle rounds, used in the Romulan rifle.
 
 uplink-pirate-rifleammobulkrubber-name = Romulan Rifle Bulk Rubber Ammo Box
